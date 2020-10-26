@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Puzzle 15</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Sigmar+One&display=swap">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
+</head>
+
+<body>
+    <main class="page">
+
+        <h1 class="page__title">Puzzle 15</h1>
+
+        <section class="statistics">
+            <details class="statistics__winners">
+                <summary class="statistics__winners-header">Winners:</summary>
+                <ol class="statistics__winners-list">
+                    <li class="statistics__winners-item">
+                        Stephen Hawking - 0.99 sec
+                    </li>
+                </ol>
+
+            </details>
+            <p class="statistics__name">Name:</p>
+            <p class="statistics__timer">Time: 0:00</p>
+        </section>
+
+        <section class="game">
+
+            <div class="box game__box"></div>
+
+            <div class="game__controls">
+                <button class="button button_type_reset">Reset</button>
+                <button class="button button_type_start">Start</button>
+            </div>
+        </section>
+
+        <section class="popup popup_hidden" data-component="win-popup">
+            <div class="popup__content">
+                <h2 class="popup__title">You win! 🎉</h2>
+                <p class="popup__info">Your time: <span class="popup__time">0:00</span>
+                </p>
+                <button class="button button_type_start">OK</button>
+            </div>
+        </section>
+
+        <section class="popup popup_hidden" data-component="user-popup">
+            <div class="popup__content">
+                <form action="#" class="popup__form">
+                    <div class="popup__input-wrapper">
+                        <label for="name-input" class="popup__input-label">Fill in your name</label>
+                        <input id="name-input" type="text" class="popup__input" placeholder="Your name" required minlength="3">
+                        <div class="popup__error"></div>
+                    </div>
+                    <div class="popup__controls">
+                        <button class="button button_type_start" type="submit">OK</button>
+                        <button class="button button_type_reset" type="reset">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <template data-component="cell">
+            <div id="1" class="cell">
+                <div class="cell__num">1</div>
+            </div>
+        </template>
+
+        <script src="./Popup.js"></script>
+        <script src="./UserPopup.js"></script>
+        <script src="./WinPopup.js"></script>
+        <script src="./UserInfo.js"></script>
+        <script src="./Timer.js"></script>
+        <script src="./gameFunctions.js"></script>
+        <script src="./index.js"></script>
+    </main>
+</body>
+
+</html>
