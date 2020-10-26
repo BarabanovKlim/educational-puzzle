@@ -13,6 +13,15 @@
 
 /* page */
 
+.developer-name {
+  /* min-width: 300px; */
+  /* position: absolute; */
+  /* top: 75px; */
+  margin:0;
+  margin-bottom: 15px;
+  color: #254e70;
+}
+
 .page {
   font-family: var(--font-base);
   margin: 0 auto;
